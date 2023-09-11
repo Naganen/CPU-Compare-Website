@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <link href='https://fonts.googleapis.com/css?family=IBM Plex Mono' rel='stylesheet'>
+    <script>
+        function writeInfo1() {
+            if (document.getElementById("c1s1").selected == true) {
+                document.getElementById("c1p1").innerText="12 Core";
+                document.getElementById("c1p2").innerText="Turbo 3.6 Ghz";
+                document.getElementById("c1p3").innerText="Hyperthreading Yes";
+                document.getElementById("c1p4").innerText="Unlocked Yes";
+                document.getElementById("c1p5").innerText="Technology 12 nm";
+                document.getElementById("c1p6").innerText="Release Q4 2019";
+                document.getElementById("c1p7").innerText="Single 931";
+                document.getElementById("c1p8").innerText="Multi 6822";
+                document.getElementById("c1p9").innerText="Single 941";
+                document.getElementById("c1p10").innerText="Multi 5241";
+            }
+
+            if (document.getElementById("c1s2").selected == true) {
+                document.getElementById("c1p1").innerText="4 Core";
+                document.getElementById("c1p2").innerText="Turbo 4.2 Ghz";
+                document.getElementById("c1p3").innerText="Hyperthreading No";
+                document.getElementById("c1p4").innerText="Unlocked No";
+                document.getElementById("c1p5").innerText="Technology 14 nm";
+                document.getElementById("c1p6").innerText="Release Q2 2019";
+                document.getElementById("c1p7").innerText="Single 1072";
+                document.getElementById("c1p8").innerText="Multi 3921";
+                document.getElementById("c1p9").innerText="Single 1069";
+                document.getElementById("c1p10").innerText="Multi 3249";
+            }
+        }
+
+        function writeInfo2() {
+            if (document.getElementById("c2s1").selected == true) {
+                document.getElementById("c2p1").innerText="12 Core";
+                document.getElementById("c2p2").innerText="Turbo 3.6 Ghz";
+                document.getElementById("c2p3").innerText="Hyperthreading Yes";
+                document.getElementById("c2p4").innerText="Unlocked Yes";
+                document.getElementById("c2p5").innerText="Technology 12 nm";
+                document.getElementById("c2p6").innerText="Release Q4 2019";
+                document.getElementById("c2p7").innerText="Single 931";
+                document.getElementById("c2p8").innerText="Multi 6822";
+                document.getElementById("c2p9").innerText="Single 941";
+                document.getElementById("c2p10").innerText="Multi 5241";
+            }
+
+            if (document.getElementById("c2s2").selected == true) {
+                document.getElementById("c2p1").innerText="4 Core";
+                document.getElementById("c2p2").innerText="Turbo 4.2 Ghz";
+                document.getElementById("c2p3").innerText="Hyperthreading No";
+                document.getElementById("c2p4").innerText="Unlocked No";
+                document.getElementById("c2p5").innerText="Technology 14 nm";
+                document.getElementById("c2p6").innerText="Release Q2 2019";
+                document.getElementById("c2p7").innerText="Single 1072";
+                document.getElementById("c2p8").innerText="Multi 3921";
+                document.getElementById("c2p9").innerText="Single 1069";
+                document.getElementById("c2p10").innerText="Multi 3249";
+            }
+        }
+    </script>
+    <style>
+        html, body{
+            background: linear-gradient(108deg, #662549 0%, #AE445A 100%);
+            align-items: center;
+            justify-content: center;
+            height: 100%; 
+            overflow: hidden;
+        }
+
+        h1 {
+            color: #FFFADD;
+            text-align: center;
+            font-family: IBM Plex Mono;
+            font-size: 44px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        select {
+            width: 250px;
+            height: 45px;
+            border-radius: 50px;
+            background: linear-gradient(91deg, #EFD595 0%, #FFFADD 100%);
+            color: linear-gradient(180deg, #662549 0%, #AE445A 100%);
+            font-family: IBM Plex Mono;
+            padding-left: 15px;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        h2 {
+            color: #FFFADD;
+            text-align: center;
+            font-family: IBM Plex Mono;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 0;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        h3 {
+            color: #FFFADD;
+            text-align: center;
+            font-family: IBM Plex Mono;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 20px;
+        }
+
+        p {
+            color: #FFFADD;
+            text-align: center;
+            font-family: IBM Plex Mono;
+            font-size: 18px;
+            font-style: normal;
+            line-height: 5px;
+        }
+
+        .selection {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .select {
+            width: 150px;
+            height: 45px;
+            border-radius: 50px;
+            background: linear-gradient(91deg, #EFD595 0%, #FFFADD 100%);
+            color: linear-gradient(180deg, #662549 0%, #AE445A 100%);
+            font-family: IBM Plex Mono;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+    </style>
+    <head>
+        <title>CPU Compare Website</title>
+    </head> 
+    <body>
+        <h1>CPU Compare</h1>
+        <div class="selection">
+        <select id="cp1" onchange="writeInfo1()">
+            <option value="0">Select CPU</option>
+            <option id="c1s1" value="1">Ryzen 5 1600 AF</option>
+            <option id="c1s2" value="2">Intel Core i3 9100F</option>
+        </select>
+        <h2>vs</h2>
+        <select id="cp2" onchange="writeInfo2()">
+            <option value="0">Select CPU</option>
+            <option id="c2s1" value="1">Ryzen 5 1600 AF</option>
+            <option id="c2s2" value="2">Intel Core i3 9100F</option>
+        </select>
+        </div>
+        <div class="selection">
+            <div>
+                <h3>General Info</h3>
+                <p id="c1p1">X Core</p>
+                <p id="c1p2">Turbo X.xx Ghz</p>
+                <p id="c1p3">Hyperthreading ?</p>
+                <p id="c1p4">Unlocked ?</p>
+                <p id="c1p5">Technology X nm</p>
+                <p id="c1p6">Release QX XXXX</p>
+
+                <h3>Cinebench R23</h3>
+                <p id="c1p7">Single XXXX</p>
+                <p id="c1p8">Multi XXXX</p>
+
+                <h3>Geekbench 5</h3>
+                <p id="c1p9">Single XXXX</p>
+                <p id="c1p10">Multi XXXX</p>
+            </div>
+            <div style="padding-left: 65px;padding-right: 65px;">
+                <h3><br></h3>
+            </div>
+            <div>
+                <h3>General Info</h3>
+                <p id="c2p1">X Core</p>
+                <p id="c2p2">Turbo X.xx Ghz</p>
+                <p id="c2p3">Hyperthreading ?</p>
+                <p id="c2p4">Unlocked ?</p>
+                <p id="c2p5">Technology X nm</p>
+                <p id="c2p6">Release QX XXXX</p>
+
+                <h3>Cinebench R23</h3>
+                <p id="c2p7">Single XXXX</p>
+                <p id="c2p8">Multi XXXX</p>
+
+                <h3>Geekbench 5</h3>
+                <p id="c2p9">Single XXXX</p>
+                <p id="c2p10">Multi XXXX</p>
+            </div>
+        </div>
+    </body>
+</html>
