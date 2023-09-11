@@ -1,1 +1,1 @@
-You can try on https://naganen.github.io/CPU-Compare-Website/
+You can try on https://naganen.github.io/HTML-CPU-Compare-Website/
